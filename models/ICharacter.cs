@@ -1,6 +1,6 @@
 ﻿namespace models
 {
-	public interface char? : Entity
+	public interface ICharacter : Entity
 	{
 		int Health {get;set;}
 	}

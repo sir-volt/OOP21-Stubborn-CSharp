@@ -16,23 +16,6 @@ namespace worldMapTest
 	[TestClass]
 	public class WorldMapTest
 	{
-		/*
-		WorldMap worldMap = new WorldMapImpl();
-		
-
-		[TestMethod]
-        public void testRandomSpawnStrategy()
-        {
-            WorldMap worldMap = new WorldMapImpl();
-            Assert.AreEqual(ENEMIES_NUMBER, worldMap.Enemies.Count);
-            Assert.IsNull(worldMap.updatePlayerPosition(Movement.valueOf(Movement.InnerEnum.LEFT)));
-            Assert.IsNotNull(worldMap.updatePlayerPosition(Movement.valueOf(Movement.InnerEnum.RIGTH)));
-        }
-
-		private void InitializeInstanceFields()
-		{
-			worldMap = new WorldMapImpl(WIDTH, HEIGHT, NUM_ENEMIES, NUM_COLLECTABLES, randomStrategy);
-		}*/
 		private static int WIDTH = 51;
 		private static int HEIGHT = 51;
 		private static int NUM_ENEMIES = 5;
@@ -46,7 +29,7 @@ namespace worldMapTest
 
 
 		[TestMethod]
-		public virtual void testRandomSpawnStrategy()
+		public void testRandomSpawnStrategy()
 		{
 			int width = 10;
 			int height = 10;
@@ -62,7 +45,8 @@ namespace worldMapTest
 			Assert.True(allSet.ContainsAll(set2));
 		}
 
-		public virtual void testWorldMapCreation()
+		[TestMethod]
+		public void testWorldMapCreation()
 		{
 			IDictionary<Point2D, Optional<Entity>> board = worldMap.getBoard();
 			long count = board.Values.Where(v => v.isPresent()).Count();
@@ -71,8 +55,8 @@ namespace worldMapTest
 			Assert.AreEqual(NUM_ENEMIES + NUM_COLLECTABLES + 1, count);
 		}
 
-
-		public virtual void testMovePlayer()
+		[TestMethod]
+		public void testMovePlayer()
 		{
 			worldMap.movePlayer(MOVEMENT.LEFT);
 			worldMap.movePlayer(MOVEMENT.UP);

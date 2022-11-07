@@ -1,6 +1,6 @@
 ﻿namespace models
 {
-	public interface Enemy : char?
+	public interface IEnemy : IEntity
 	{
 		AiEnemy Ai {get;}
 	}
