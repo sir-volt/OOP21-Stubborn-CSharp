@@ -1,6 +1,6 @@
 ﻿namespace models
 {
-	public interface IPlayer :IEntity
+	public interface IPlayer : IEntity
 	{
 
 	}
