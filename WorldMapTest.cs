@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using Entity = models.Entity;
+using IEntity = models.IEntity;
 using MOVEMENT = models.MOVEMENT;
-using Player = models.Player;
+using IPlayer = models.IPlayer;
 using Point2D = models.Point2D;
 using RandomSpawnStrategy = models.RandomSpawnStrategy;
-using SpawnStrategy = models.SpawnStrategy;
-using WorldMap = models.WorldMap;
+using ISpawnStrategy = models.ISpawnStrategy;
+using IWorldMap = models.IWorldMap;
 using WorldMapImpl = models.WorldMapImpl;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -22,8 +22,8 @@ namespace worldMapTest
 		private static int NUM_COLLECTABLES = 15;
 		private static int EXPECTED_SIZE = 5;
 
-		private SpawnStrategy randomStrategy = new RandomSpawnStrategy();
-		private WorldMap worldMap;
+		private ISpawnStrategy randomStrategy = new RandomSpawnStrategy();
+		private IWorldMap worldMap;
 		private Point2D startPlayerPos = new Point2D(WIDTH / 2, HEIGHT / 2);
 		private Point2D randomPos = new Point2D(3, EXPECTED_SIZE);
 
@@ -70,7 +70,7 @@ namespace worldMapTest
 
 }
 
-//Class imported from internet to better use Collections
+//Class imported to better use Collections
 
 using System;
 using System.Collections.Generic;

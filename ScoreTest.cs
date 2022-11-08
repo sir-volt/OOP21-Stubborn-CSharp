@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using Pair = models.Pair;
-using Scores = models.Scores;
+using IScores = models.IScores;
 using ScoresImpl = models.ScoresImpl;
-using Test = org.junit.jupiter.api.Test;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace scoresTest
 {
